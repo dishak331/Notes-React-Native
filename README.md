@@ -16,13 +16,13 @@ _"Make your day easier, make your life easier. Organize your notes and tasks"._
 1. Clone this repo:
 
 ```sh
-$ git clone https://github.com/dishak331/notes.git
+$ git clone https://github.com/dishak331/Notes-React-Native.git
 ```
 
 2. Then go to the project's folder:
 
 ```sh
-cd notes
+cd Notes-React-Native
 ```
 
 3. Install all dependencies:
