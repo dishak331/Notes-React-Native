@@ -7,7 +7,7 @@ export default () => {
 
   return (
     <LottieView
-      source={require("../../assets/splash/2.json")}
+      source={require("../../assets/splash/splash.json")}
       autoPlay
       loop={false}
       onAnimationFinish={() => navigation.navigate("List")}

@@ -26,9 +26,16 @@ export default () => {
     BackHandler.addEventListener("hardwareBackPress", () => true);
   }, []);
 
+  let [fontsLoaded, error] = useFonts({
+    "Lato-Bold": require("../../../assets/fonts/Lato/Lato-Bold.ttf"),
+    "Lato-Regular": require("../../../assets/fonts/Lato/Lato-Regular.ttf"),
+    "Lobster-Regular": require("../../../assets/fonts/Lobster/Lobster-Regular.ttf"),
+  });
+
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: "Suas notas",
+      title: "Notes",
+
       headerLeft: false,
       headerRight: () => (
         <AddButton
@@ -46,11 +53,6 @@ export default () => {
       key: index,
     });
   };
-
-  let [fontsLoaded, error] = useFonts({
-    "WorkSans-SemiBold": require("../../../assets/fonts/WorkSans/WorkSans-SemiBold.ttf"),
-    "WorkSans-Regular": require("../../../assets/fonts/WorkSans/WorkSans-Regular.ttf"),
-  });
 
   if (!fontsLoaded) {
     return <AppLoading />;
@@ -70,8 +72,8 @@ export default () => {
       {list.length === 0 && (
         <NoNotes>
           <NoNotesImage source={require("../../assets/nonotes.png")} />
-          <NoNotesText style={{ fontFamily: "WorkSans-SemiBold" }}>
-            Nenhuma anotação
+          <NoNotesText style={{ fontFamily: "Lato-Bold" }}>
+            Empty notes
           </NoNotesText>
         </NoNotes>
       )}

@@ -41,7 +41,7 @@ export default () => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: status === "new" ? "Nova Anotação" : "Editar Anotação",
+      title: status === "new" ? "New Note" : "Edit Note",
       headerLeft: () => (
         <CloseButton underlayColor="transparent" onPress={handleCloseButton}>
           <CloseButtonImage source={require("../../assets/close.png")} />
@@ -76,7 +76,7 @@ export default () => {
 
       navigation.navigate("List");
     } else {
-      alert("Preencha titulo e corpo");
+      alert("Empty List - Try adding something");
     }
   };
 
@@ -121,32 +121,32 @@ export default () => {
       <TitleInput
         value={title}
         onChangeText={(t) => setTitle(t)}
-        placeholder="Título | ex: Correr 🏃"
+        placeholder="Title"
         placeholderTextColor="#ccc"
         autoFocus={true}
-        style={{ fontFamily: "WorkSans-SemiBold" }}
+        style={{ fontFamily: "Lato-Bold" }}
       />
       <BodyInput
         value={body}
         onChangeText={(t) => setBody(t)}
-        placeholder="Detalhes | ex: Fazer caminhada amanhã por uma hora ou mais 😎"
+        placeholder="Description"
         placeholderTextColor="#ccc"
         multiline={true}
         textAlignVertical="top"
-        style={{ fontFamily: "WorkSans-Regular" }}
+        style={{ fontFamily: "Lato-Regular" }}
       />
       {status === "edit" && (
         <ButtonsContainer>
           <DeleteButton underlayColor="#FF0000" onPress={handleDeleteNote}>
-            <DeleteButtonText style={{ fontFamily: "WorkSans-Regular" }}>
-              Excluir anotação
+            <DeleteButtonText style={{ fontFamily: "Lato-Regular" }}>
+              Delete Note
             </DeleteButtonText>
           </DeleteButton>
 
           {!done && (
             <SuccessButton underlayColor="#2E8500" onPress={handleSuccessNote}>
-              <SuccessButtonText style={{ fontFamily: "WorkSans-Regular" }}>
-                Marcar como feito
+              <SuccessButtonText style={{ fontFamily: "Lato-Regular" }}>
+                Save and Done
               </SuccessButtonText>
             </SuccessButton>
           )}
@@ -156,8 +156,8 @@ export default () => {
               underlayColor="#2E8500"
               onPress={handleNoSuccessNote}
             >
-              <NoSuccessButtonText style={{ fontFamily: "WorkSans-Regular" }}>
-                Desmarcar
+              <NoSuccessButtonText style={{ fontFamily: "Lato-Regular" }}>
+                Save and Not Done
               </NoSuccessButtonText>
             </NoSuccessButton>
           )}

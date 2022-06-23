@@ -45,7 +45,7 @@ export default ({ data, index, onPress }) => {
       <BoxContainer>
         <Title
           style={{
-            fontFamily: "WorkSans-SemiBold",
+            fontFamily: "Lato-Bold",
           }}
           success={data.done}
         >

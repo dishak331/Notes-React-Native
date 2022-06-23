@@ -6,12 +6,12 @@ export const Container = styled.View`
 `;
 
 export const AddButton = styled.TouchableHighlight`
-  margin-right: 15px;
-  padding: 10px;
+  margin-right: 17px;
+  padding: 12px;
 `;
 
 export const AddButtonImage = styled.Image`
-  width: 24px;
+  width: 23px;
   height: 24px;
 `;
 
@@ -28,11 +28,11 @@ export const NoNotes = styled.View`
 
 export const NoNotesImage = styled.Image`
   width: 250px;
-  height: 250px;
-  margin-bottom: 10px;
+  height: 240px;
+  margin-bottom: 5px;
 `;
 
 export const NoNotesText = styled.Text`
-  font-size: 20px;
+  font-size: 18px;
   color: #000;
 `;
